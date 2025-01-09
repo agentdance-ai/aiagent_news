@@ -1,83 +1,84 @@
-🤖 AgentDance News Bot
+🤖 AI Dance News Bot
+Show Image
+Show Image
+An intelligent bot that automatically fetches and posts AI dance-related news 🎭
+✨ Features
 
-Welcome to the AgentDance News Bot! This repository contains a Python script designed to fetch, process, and publish news to Twitter, keeping the crypto and tech communities updated with the latest trends. 🚀
+🔄 Automatically fetches latest AI dance news on schedule
+🧠 Intelligent content processing using OpenAI
+📢 Automated news posting to social media
+⏰ Flexible scheduling mechanism
+🛡️ Robust error handling for stable operation
 
-🌟 Features
-	•	AI-Driven News Processing: Uses OpenAI’s API to analyze and curate news articles.
-	•	Daily Automation: Fetches relevant news and posts to Twitter on a schedule.
-	•	Customizable Scheduling: Easily configure when to fetch and post news.
-	•	Error Handling: Logs errors for smooth operation and debugging.
+🚀 Getting Started
+Prerequisites
 
-🛠️ Installation
-	1.	Clone the repository:
+Python 3.6+
+OpenAI API key
+Required Python packages (see requirements.txt)
 
-git clone https://github.com/your-username/agentdance-news-bot.git
-cd agentdance-news-bot
+Installation
+
+Clone the repository:
+
+bashCopygit clone https://github.com/yourusername/ai-dance-news-bot.git
+cd ai-dance-news-bot
+
+Install dependencies:
+
+bashCopypip install -r requirements.txt
+
+Configure environment variables:
+Create a .env file and add:
+
+CopyOPENAI_API_KEY=your_openai_api_key_here
+🎯 Usage
+Running the Bot
+bashCopypython main.py
+The bot will run automatically according to the following schedule:
+
+20:41 - First post
+21:00 - Second post
+21:30 - Third post
+
+Test Mode
+To test functionality immediately, set immediate_test to True:
+pythonCopyimmediate_test = True  # in main() function
+🛠 Project Structure
+Copyai-dance-news-bot/
+├── main.py              # Main entry point
+├── AIDanceNewsProcessor.py  # Core news processing class
+├── .env                 # Environment variables
+└── README.md           # Documentation
+📝 Configuration
+
+Adjust posting times: Modify schedule.every().day.at() in main.py
+Customize processing logic: Update methods in AIDanceNewsProcessor.py
+Environment variables: Add required API keys and configs in .env
+
+🤝 Contributing
+Contributions are welcome! Here's how you can help:
+
+Fork the repository
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some amazing feature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details
+🙏 Acknowledgments
+
+OpenAI API for intelligent processing
+Python Schedule library for task scheduling
+Feedparser for RSS parsing
+
+📞 Contact
+For questions or suggestions:
+
+Open an issue
+Email: [your-email@example.com]
+Follow our social media
 
 
-	2.	Set up the environment:
-	•	Install dependencies:
-
-pip install -r requirements.txt
-
-
-	•	Create a .env file:
-
-touch .env
-
-
-	•	Add your OpenAI API key to the .env file:
-
-OPENAI_API_KEY=your_openai_api_key
-
-
-	3.	Run the bot:
-
-python main.py
-
-🕒 How It Works
-	1.	Fetch News: The bot pulls the latest news articles and processes them with the AIDanceNewsProcessor.
-	2.	Post to Twitter: News is automatically tweeted using scheduled jobs.
-	3.	Scheduler: The script runs jobs daily at predefined times (configurable).
-
-⚙️ Configuration
-
-Schedule Jobs
-
-Edit the main() function in main.py to adjust the posting schedule:
-
-schedule.every().day.at("20:41").do(post_tweet_job)
-schedule.every().day.at("21:00").do(post_tweet_job)
-schedule.every().day.at("21:30").do(post_tweet_job)
-
-Immediate Testing
-
-Set immediate_test to True to run the fetch and post jobs immediately:
-
-immediate_test = True
-
-🐛 Troubleshooting
-	•	OPENAI_API_KEY not found: Ensure your .env file contains the correct API key.
-	•	Scheduler Errors: Check your Python environment and ensure all dependencies are installed.
-
-📄 Example Output
-
-Fetching News
-
-[2025-01-08 20:00:00] Starting daily news fetch...
-[2025-01-08 20:01:00] Daily news fetch completed.
-
-Posting News
-
-[2025-01-08 21:00:00] Starting news posting job...
-[2025-01-08 21:01:00] News posting job completed.
-
-🚀 Contributing
-
-Contributions are welcome! Feel free to fork the repository, create issues, or submit pull requests.
-
-📜 License
-
-This project is licensed under the MIT License.
-
-💡 Let’s keep the world updated—one tweet at a time! 🕺🎉
+Made with ❤️ for the AI dance community
